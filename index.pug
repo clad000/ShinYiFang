@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 新宜芳香鋪 | SHIN YI FANG
+    link(rel="stylesheet", href="syf.css")
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous")
+
+    
+    
+  body
+    .all_wrap
+      //- header
+      header
+        nav
+          .title
+            h1 
+              a(href="index.html") 新宜芳香舖
+            a(href="javascript:;").open &equiv; 
+            a(href="javascript:;").close.hidden &times;
+          .nav_list
+            a(href="product.html").color1 產品
+            a(href="service.html").color2 服務項目
+            a(href="https://medium.com/@shinyifangtw" target="_blank").color3 部落格
+            a(href="about.html").color4 關於我們
+        //- banner
+      .banner
+        .slider
+          .slides
+            //- radio-btn need display: none
+            input(type="radio" name="radio-btn" id="banner_radio1")
+            input(type="radio" name="radio-btn" id="banner_radio2")
+            input(type="radio" name="radio-btn" id="banner_radio3")
+
+            
+            //- img
+            .slide.first
+              img(src="https://picsum.photos/800/600?random=1", alt="")
+            .slide
+              img(src="https://picsum.photos/800/600?random=2", alt="")
+            .slide
+              img(src="https://picsum.photos/800/600?random=3", alt="")
+
+              
+            //- auto-btn 
+            .navigation-auto
+              .auto-btn1 
+              .auto-btn2 
+              .auto-btn3 
+   
+              
+            //- for user and link radio-btn
+            //- 要放在比 auto-btn 前面，否則會無法 click     
+            .navigation-manual
+              label(for="banner_radio1" class="manual-btn")
+              label(for="banner_radio2" class="manual-btn")
+              label(for="banner_radio3" class="manual-btn")
+
+      //- 產品推薦
+      article.active
+        h2 產品推薦
+        ul
+          li
+            a(href="javascript:;")
+              img(src="https://picsum.photos/400/300?random=4", alt="")
+              .txt
+                h3 香 系列
+                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, similique!
+          li
+            a(href="javascript:;")
+              img(src="https://picsum.photos/400/300?random=5", alt="")
+              .txt
+                h3 香環 系列
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, dolor!
+          li
+            a(href="javascript:;")
+              img(src="https://picsum.photos/400/300?random=6", alt="")
+              .txt
+                h3 香粉 系列
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, doloremque.
+
+      //- 願景
+      article.hope
+        .hopewrap
+          .hopeimg 
+            img(src="https://picsum.photos/800/600?random=7", alt="")
+            
+          .hopetxt 
+            //- h2 測試文字字
+            h2 香火的傳承
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam provident sequi molestiae odit nisi! Totam modi earum labore ut qui!
+              
+    //- footer
+    footer
+      ul
+        .footer_left
+          li.rwd_mail
+            p shinyifangtw@gmail.com
+          li.rwd_phone
+            p 02 2668 8532
+          li
+            p 238 新北市樹林區佳園路一段75巷188號1樓
+        .footer_right
+          li
+            p &copy; 2021 SHIN YI FANG.  All rights reserved.
+
+            
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    script(src="sfy.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js")

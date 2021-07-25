@@ -1,0 +1,632 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100,300,400,500,700,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+html, body {
+  width: 100%;
+  vh: 100%;
+}
+
+img {
+  display: block;
+  vertical-align: middle;
+}
+
+.all_wrap {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 5%;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+header nav {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 50px 150px;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  z-index: 999;
+  transition: 0.5s;
+}
+
+header nav h1 a {
+  display: block;
+  width: 300px;
+  color: #000000;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: Noto Sans TC, sans-serif;
+}
+
+header nav .nav_list {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav a {
+  padding-left: 50px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 24px;
+  font-family: source-han-sans-korean, sans-serif;
+  transition: 0.5s;
+}
+
+.nav_list a:after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 10px;
+  margin-top: -10px;
+  background-color: #a08e61;
+  z-index: -1;
+  transition: width .2s .2s;
+}
+
+.nav_list a:hover:after {
+  width: 100%;
+}
+
+.open, .close {
+  display: none;
+}
+
+.sticky {
+  padding: 20px 150px;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 135px;
+  margin-bottom: 200px;
+}
+
+.banner .slider {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+
+.slides {
+  width: 500%;
+  height: auto;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.banner .slide img {
+  width: 100%;
+  height: 600px;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  margin-top: 650px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #a08e61;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 1s;
+  margin: 0 20px;
+}
+
+.manual-btn:hover {
+  background-color: #a08e61;
+}
+
+#banner_radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#banner_radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#banner_radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  margin-top: 650px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div {
+  border: 2px solid #a08e61;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  transition: 1s;
+  margin: 0 20px;
+}
+
+#banner_radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: #a08e61;
+}
+
+#banner_radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: #a08e61;
+}
+
+#banner_radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: #a08e61;
+}
+
+.active {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.active h2 {
+  display: inline-block;
+  font-family: source-han-sans-korean, sans-serif;
+  font-size: 120px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: absolute;
+  left: 0;
+  top: -150px;
+}
+
+.active ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.active li {
+  width: 30%;
+}
+
+.active img {
+  width: 100%;
+}
+
+.active .txt {
+  padding: 20px 0px;
+}
+
+.active h3 {
+  font-family: source-han-sans-korean, sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 32px;
+  padding: 20px 0 10px 0;
+  color: #000000;
+}
+
+.active p {
+  font-family: source-han-sans-korean, sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.hope {
+  width: 100%;
+  height: auto;
+  margin-bottom: 200px;
+}
+
+.hopewrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row-reverse;
+  position: relative;
+}
+
+.hopetxt {
+  width: 40%;
+  padding: 50px 20px 0px 0px;
+}
+
+.hopetxt p {
+  font-family: Noto Sans TC, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.hopewrap h2 {
+  font-family: source-han-sans-korean, sans-serif;
+  font-size: 120px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.hopeimg {
+  width: 60%;
+  z-index: 1;
+}
+
+.hopeimg img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 100px;
+  background-color: #000000;
+}
+
+footer ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 50px 5%;
+}
+
+footer .footer_left {
+  width: 70%;
+  display: flex;
+}
+
+footer .footer_left li {
+  padding-right: 30px;
+}
+
+footer .footer_right {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer p {
+  font-family: Noto Sans TC, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header nav h3 {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+  header nav .nav_list {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header nav a {
+    padding: 0 20px;
+    color: #000000;
+    font-size: 16px;
+    font-family: source-han-sans-korean, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .banner .slide img {
+    height: 400px;
+  }
+  .navigation-manual {
+    margin-top: 450px;
+  }
+  .navigation-auto {
+    margin-top: 450px;
+  }
+  .active h2 {
+    font-size: 75px;
+    top: -100px;
+  }
+  .hope {
+    margin-bottom: 200px;
+  }
+  .hopetxt {
+    width: 40%;
+    padding: 30px 20px 0px 0px;
+  }
+  .hopetxt p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 28px;
+    color: #000000;
+  }
+  .hopewrap h2 {
+    font-size: 75px;
+    bottom: 0px;
+  }
+  footer {
+    margin-top: 0px;
+  }
+  footer ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 100px;
+  }
+  footer .footer_left {
+    width: 70%;
+  }
+  footer .footer_left li {
+    padding-right: 20px;
+  }
+  footer .footer_right {
+    width: 30%;
+  }
+  footer p {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .all_wrap {
+    padding: 0;
+  }
+  header nav {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 60px 0px;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    transition: 0.5s;
+  }
+  header nav h1 a {
+    display: block;
+    width: 200px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    z-index: 999;
+    transition: 0.5s;
+    padding-left: 20px;
+  }
+  header nav .nav_list {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #000000;
+    transition: all 1s;
+    z-index: 1;
+    padding: 150px 0;
+  }
+  .banner_slide {
+    left: 0px !important;
+  }
+  header nav .nav_list a {
+    display: block;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+  }
+  .open, .close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 999;
+    color: #a08e61;
+    font-size: 50px;
+    opacity: 0.5;
+    transition: all 0.5s;
+  }
+  .hidden {
+    opacity: 0;
+    visibility: hidden;
+    cursor-events: none;
+  }
+  .nav_list a:after {
+    display: none;
+  }
+  .sticky {
+    padding: 30px 0px;
+  }
+  .sticky2 {
+    top: 15px;
+  }
+  .navH1_color {
+    color: #FFFFFF;
+  }
+  .banner {
+    margin-top: 120px;
+    margin-bottom: 200px;
+  }
+  .banner .slider {
+    padding-bottom: 80px;
+  }
+  .banner .slide img {
+    width: 100%;
+    height: 300px;
+  }
+  .navigation-manual {
+    margin-top: 330px;
+  }
+  .manual-btn {
+    width: 15px;
+    height: 15px;
+    margin: 0 15px;
+  }
+  .navigation-auto {
+    margin-top: 330px;
+  }
+  .navigation-auto div {
+    width: 15px;
+    height: 15px;
+    margin: 0 15px;
+  }
+  .active {
+    margin-top: 0px;
+    margin-bottom: 200px;
+  }
+  .active h2 {
+    font-size: 60px;
+    line-height: 90px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    top: -80px;
+    left: 5px;
+  }
+  .active ul {
+    display: block;
+  }
+  .active li {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .active .txt {
+    padding: 10px 20px;
+  }
+  .active h3 {
+    font-size: 21px;
+    line-height: 32px;
+    padding: 0;
+  }
+  .active p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    padding-top: 10px;
+  }
+  .hope {
+    margin-bottom: 200px;
+  }
+  .hopewrap {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    padding-top: 80px;
+  }
+  .hopetxt {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .hopetxt p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+  }
+  .hopewrap h2 {
+    font-size: 61px;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    z-index: 2;
+  }
+  .hopeimg {
+    width: 100%;
+    z-index: 1;
+  }
+  footer {
+    margin-top: 100px;
+  }
+  footer ul {
+    display: block;
+    padding: 30px 0;
+    text-align: center;
+  }
+  footer .footer_left li, .footer_right li {
+    padding: 0;
+  }
+  footer .footer_left {
+    width: 100%;
+    display: block;
+  }
+  footer .footer_right {
+    width: 100%;
+    display: block;
+  }
+  footer li {
+    margin-bottom: 10px;
+  }
+  .rwd_mail, .rwd_phone {
+    display: inline-block;
+  }
+  .rwd_mail {
+    margin-right: 10px;
+  }
+  footer p {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 26.7px;
+  }
+}

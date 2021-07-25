@@ -1,0 +1,149 @@
+//字型
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100,300,400,500,700,900&display=swap")
+
+// 顏色
+$colorBlack: #000000
+$colorWhite: #FFFFFF
+$colorBrown: #a08e61
+
+*
+  //CSS reset
+  margin: 0
+  padding: 0
+  list-style: none
+  text-decoration: none
+  //RWD set
+  box-sizing: border-box
+  //在 ios 旋轉手機畫面時鎖定文字不縮放
+  -webkit-text-size-adjust: none
+  // 在 mobile 滑動時，依據滑動的力道慢慢停止
+  -webkit-overflow-scrolling: touch
+
+  //font set
+  // font-family: 'Noto Sans TC', sans-serif
+  // font-family: source-han-sans-korean, sans-serif
+
+html,body
+  width: 100%
+  vh: 100%
+  // background-color: red
+img
+  display: block
+  vertical-align: middle
+
+.all_wrap
+  width: 100%
+  height: auto
+  margin: 0 auto
+  padding: 0 5%
+  position: relative
+
+// header------------------------------------------------
+header
+  // border: 1px solid red
+  width: 100%
+  height: auto
+  overflow: hidden
+
+header nav
+  // border: 1px solid blue
+  width: 100%
+  height: auto
+  overflow: hidden
+  margin: 0 auto
+  display: flex
+  align-items: center
+  padding: 50px 150px
+  background-color: #fff
+  position: fixed
+  left: 0
+  z-index: 999
+  transition: 0.5s
+
+header nav h1 a
+  // border: 1px solid green
+  display: block
+  width: 300px
+  color: $colorBlack
+  font-size: 26px
+  font-weight: 600
+  letter-spacing: 2px
+  font-family: Noto Sans TC, sans-serif
+
+header  nav .nav_list
+  // border: 1px solid red
+  width: 100%
+  height: auto
+  overflow: hidden
+  display: flex
+  justify-content: flex-end
+
+header nav a
+  // border: 1px solid green
+  padding-left: 50px
+  color: $colorBlack
+  font-size: 16px
+  font-weight: 400
+  letter-spacing: 2px
+  line-height: 24px
+  font-family: source-han-sans-korean, sans-serif
+  transition: 0.5s
+
+.nav_list a:after
+  // border: 1px solid red
+  content: ''
+  display: block
+  width: 0%
+  height: 10px
+  margin-top: -10px
+  background-color: $colorBrown
+  z-index: -1
+  transition: width .2s .2s
+
+.nav_list a:hover:after
+  width: 100%
+
+.open,.close
+  display: none
+
+.sticky
+  padding: 20px 150px
+  // background-color: #fff
+
+//footer ------------------------------------------------
+footer
+  // border: 5px solid red
+  width: 100%
+  height: auto
+  overflow: hidden
+  margin-top: 200px
+  background-color: $colorBlack
+
+footer ul
+  width: 100%
+  height: auto
+  display: flex
+  padding: 50px 5%
+  // justify-content: flex-end
+
+footer .footer_left
+  // border: 1px solid red
+  width: 70%
+  display: flex
+
+footer .footer_left li
+  padding-right: 30px
+
+footer .footer_right
+  // border: 1px solid blue
+  width: 30%
+  display: flex
+  justify-content: flex-end
+
+footer p
+  font-family: Noto Sans TC, sans-serif
+  font-size: 13px
+  font-weight: 600
+  letter-spacing: 0.5px
+  line-height: 14px
+  color: $colorWhite
